@@ -1,31 +1,28 @@
 # bf3_fix
-## Choose another language: [English](README_EN.md)
-
-解决战地3在高分辨率屏幕下的UI缩放问题
+Fix Battlefield 3 UI scaling issue on high resolution screens
 ![4K](preview.png)
 
 
-## 使用方法
-1. clone本项目并构建 或 下载[Release](https://github.com/GlacierLab/bf3_fix/releases/tag/Prebuilt)中的预编译版本  
-2. 重命名游戏目录下的`Engine.BuildInfo_Win32_Retail_dll`为`ori_Engine.BuildInfo_Win32_Retail_dll`  
-3. 将构建好的`Engine.BuildInfo_Win32_Retail_dll`复制到游戏目录下  
-4. 照常启动游戏  
+## How to use
+1. Clone this project and build OR download prebuilt version from [Release](https://github.com/GlacierLab/bf3_fix/releases/tag/Prebuilt)  
+2. Rename `Engine.BuildInfo_Win32_Retail_dll` in game folder to `ori_Engine.BuildInfo_Win32_Retail_dll`  
+3. Put new `Engine.BuildInfo_Win32_Retail_dll` in game folder  
+4. Launch game as normal  
 
-## 构建环境
-带有C++工作负载的VS2022  
+## Build environment
+Visual Studio 2022 with C++ workload installed  
 
-## 原理
-傻逼EA写死了UI缩放的最大分辨率是1280x720，所以大于这个分辨率都不会缩放UI  
-这个项目通过动态修改内存，替换了判断1280x720到上限的逻辑，让UI缩放一直启用  
-为什么必须是动态修改内存呢？因为游戏有加壳，我懒得脱壳了，还是DLL挂钩注入来的简单粗暴  
-具体请参考[我写的文章](https://zhuanlan.zhihu.com/p/8621793244)  
+## Principle
+Developers at EA are idiots that they just hardcoded the maximum resolution for UI scaling to 1280x720, so UI scaling won't work on resolutions higher than that.  
+This project dynamically modifies memory to replace the logic that checks if resolution is between 1280x720 and the maximum resolution, so UI scaling is always enabled.  
+Why must it be dynamic memory modification? Because the game is packed with protector, and I'm not interested in dumping it, so DLL hook injection is simple and effective method to do this.  
 
-## 缺陷
-- 设置界面的部分文字会闪烁  
-- 仅在单人模式下进行了测试，不保证对反作弊不产生影响，请自行考虑是否用于多人模式  
+## Defects
+- Some texts in settings menu will flicker  
+- Only tested in single player mode, not guaranteed to not affect anti-cheat, please consider whether to use in multiplayer mode by your own  
 
-## 许可
-MIT 或 [琴梨梨标准许可](https://zhuanlan.zhihu.com/p/7134329439)  
+## License
+MIT or [Qinlili Standard License](https://zhuanlan.zhihu.com/p/7134329439)  
 
-## 鸣谢
+## Credits
 https://github.com/SeanPesce/DLL_Wrapper_Generator
