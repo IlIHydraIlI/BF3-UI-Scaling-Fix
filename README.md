@@ -1,6 +1,8 @@
 # bf3_fix
 A fork of [GlacierLab's](github.com/GlacierLab/bf3_fix) BF3 UI scaling fix, with additional fixes for flickering text. Optional godmode revive bug fix from [FlashHit](https://github.com/FlashHit) - fixes the "crabwalk" bug which occasionally happens from many consecutive revives.
-![4K](preview.png)
+
+![1440p](ScreenshotWin32-0007.png)
+![1440p](ScreenshotWin32-0008.png)
 
 
 ## How to use
