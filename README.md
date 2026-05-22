@@ -6,7 +6,7 @@ A fork of [GlacierLab's](github.com/GlacierLab/bf3_fix) BF3 UI scaling fix, with
 ## How to use
 1. Clone this project and build OR download prebuilt version from [Release](https://github.com/GlacierLab/bf3_fix/releases/tag/Prebuilt)  
 2. Rename `Engine.BuildInfo_Win32_Retail_dll` in game folder to `ori_Engine.BuildInfo_Win32_Retail_dll`  
-3. Put new `Engine.BuildInfo_Win32_Retail_dll` in game folder  
+3. Put new `Engine.BuildInfo_Win32_Retail_dll` and optionally `gm_fix.dll` in game folder  
 4. Launch game as normal  
 
 ## Build environment
