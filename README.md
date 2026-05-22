@@ -1,5 +1,5 @@
 # bf3_fix
-Fix Battlefield 3 UI scaling issue on high resolution screens
+A fork of [GlacierLab's](github.com/GlacierLab/bf3_fix) BF3 UI scaling fix, with additional fixes for flickering text. Optional godmode revive bug fix from [FlashHit](https://github.com/FlashHit) - fixes the "crabwalk" bug which occasionally happens from many consecutive revives.
 ![4K](preview.png)
 
 
@@ -17,12 +17,14 @@ Developers at EA are idiots that they just hardcoded the maximum resolution for 
 This project dynamically modifies memory to replace the logic that checks if resolution is between 1280x720 and the maximum resolution, so UI scaling is always enabled.  
 Why must it be dynamic memory modification? Because the game is packed with protector, and I'm not interested in dumping it, so DLL hook injection is simple and effective method to do this.  
 
-## Defects
-- Some texts in settings menu will flicker  
-- Only tested in single player mode, not guaranteed to not affect anti-cheat, please consider whether to use in multiplayer mode by your own  
+## Note
+I have used these fixes extensively in a multiplayer environment, should cause no issues related to punkbuster/anticheat. 
 
 ## License
 MIT or [Qinlili Standard License](https://zhuanlan.zhihu.com/p/7134329439)  
 
 ## Credits
 https://github.com/SeanPesce/DLL_Wrapper_Generator
+github.com/GlacierLab/bf3_fix for the original UI fix
+https://github.com/FlashHit for the God mode fix and help with memory addresses
+aquamarine2000 for the flickering fix
