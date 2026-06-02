@@ -23,10 +23,13 @@ Why must it be dynamic memory modification? Because the game is packed with prot
 I have used these fixes extensively in a multiplayer environment, should cause no issues related to punkbuster/anticheat. 
 
 ## License
-MIT or [Qinlili Standard License](https://zhuanlan.zhihu.com/p/7134329439)  
+MIT  
 
 ## Credits
 https://github.com/SeanPesce/DLL_Wrapper_Generator
-github.com/GlacierLab/bf3_fix for the original UI fix
+
+https://github.com/GlacierLab/bf3_fix for the original UI fix
+
 https://github.com/FlashHit for the God mode fix and help with memory addresses
-aquamarine2000 for the flickering fix
+
+aquamarine2000 for many of the scaling fixes
