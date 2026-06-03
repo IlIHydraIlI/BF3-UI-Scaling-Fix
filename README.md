@@ -1,5 +1,7 @@
 # Battlefield 3 UI Scaling Fix
-A fork of [GlacierLab's](github.com/GlacierLab/bf3_fix) BF3 UI scaling fix, with additional fixes for flickering text. Scales the UI at higher resolutions to match the 720P size HUD. Optional godmode revive bug fix from [FlashHit](https://github.com/FlashHit) - fixes the "crabwalk" bug which occasionally happens from many consecutive revives.
+A fork of [GlacierLab's](github.com/GlacierLab/bf3_fix) BF3 UI scaling fix, with additional fixes for flickering text andd flag capture icon not progressing. Scales the UI at higher resolutions to match the 720P size HUD.
+
+Optional godmode revive bug fix from [FlashHit](https://github.com/FlashHit) - Fixes the ["crabwalk" bug](https://www.youtube.com/watch?v=S9q62Ii3ObM) which occasionally happens from many consecutive revives, fixes [chat lag](https://www.youtube.com/watch?v=NSkG4IXkPHY) (200+ messages recieved by the player's client causes severe FPS drops for every additional message), fixes [enemy players becoming unkillable](https://www.youtube.com/watch?v=vm98Y7Ee1A0) with anything other than a defibrillator after many consecutive revives.
 
 ![1440p](ScreenshotWin32-0007.png)
 ![1440p](ScreenshotWin32-0008.png)
