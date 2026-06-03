@@ -22,6 +22,9 @@ Why must it be dynamic memory modification? Because the game is packed with prot
 ## Note
 I have used these fixes extensively in a multiplayer environment, should cause no issues related to punkbuster/anticheat. 
 
+## Known Issues
+- Killfeed sometimes freezes. Can be fixed by tabbing out and back into the game. 
+
 ## License
 MIT  
 
