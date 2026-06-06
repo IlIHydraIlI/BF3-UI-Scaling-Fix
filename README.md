@@ -23,8 +23,8 @@ I have used these fixes extensively in a multiplayer environment, should cause n
 - The top and bottom "rows" of the commorose cannot be used. I'm not sure on how to fix this at the present.
 
 ## Principle
-Developers at EA are idiots, they decided to hardcode the maximum resolution for UI scaling to 1366x768, so UI scaling won't work on resolutions higher than that.  
-This project dynamically modifies memory to replace the logic that checks if resolution is between 1366x768 and the maximum resolution, so UI scaling is always enabled.  
+Developers at EA are idiots, they decided to hardcode the maximum resolution for UI scaling to 1280x720, so UI scaling won't work on resolutions higher than that.  
+This project dynamically modifies memory to replace the logic that checks if resolution is between 1280x720 and the maximum resolution, so UI scaling is always enabled.  
 Why must it be dynamic memory modification? Because the game is packed with a protector, and I'm not interested in dumping it, so DLL hook injection is a simple and effective method to achieve this.  
 
 ## License
