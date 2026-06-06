@@ -20,6 +20,7 @@ I have used these fixes extensively in a multiplayer environment, should cause n
 
 ## Known Issues
 - Killfeed sometimes freezes. Can be fixed by tabbing out and back into the game.
+- The top and bottom "rows" of the commorose cannot be used. I'm not sure on how to fix this at the present.
 
 ## Principle
 Developers at EA are idiots, they decided to hardcode the maximum resolution for UI scaling to 1366x768, so UI scaling won't work on resolutions higher than that.  
