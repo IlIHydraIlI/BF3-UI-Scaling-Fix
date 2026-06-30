@@ -7,17 +7,26 @@ A fork of [GlacierLab's bf3_fix](https://github.com/GlacierLab/bf3_fix) that fix
 
 ---
 
+## 📁 File Overview
+
+| File | Purpose |
+|------|---------|
+| `Engine.BuildInfo_Win32_Retail_dll` | **Required** – Core UI scaling fixes (HUD, minimap, nametags, commo rose) |
+| `gm_fix.dll` | **Optional** – Gameplay/chat fixes (Crabwalk, Chat Lag, Unkillable Player) |
+
+---
+
 ## 🚀 Features
 
 ### Core UI Improvements
-* **High-Resolution Scaling:** Dynamically scales the HUD for 1080p, 1440p, 4K, and ultra-wide displays.
-* **Text Flickering Fix:** Resolves the HUD text shaking/flickering issues present in GlacierLab's original implementation.
-* **Flag Capture Progress Fix:** Fixes the bug where the flag capture icon visual progression freezes.
+- **High-Resolution Scaling:** Dynamically scales the HUD for 1080p, 1440p, 4K, and ultra-wide displays.
+- **Text Flickering Fix:** Resolves the HUD text shaking/flickering issues present in GlacierLab's original implementation.
+- **Flag Capture Progress Fix:** Fixes the bug where the flag capture icon visual progression freezes.
 
-### Optional Gameplay & Performance Fixes (by FlashHit)
-* **[Crabwalk Bug Fix](https://www.youtube.com/watch?v=S9q62Ii3ObM):** Prevents the animation glitch that occurs after multiple consecutive revives.
-* **[Chat Lag Fix](https://www.youtube.com/watch?v=NSkG4IXkPHY):** Fixes severe FPS drops triggered when the client receives 200+ chat messages.
-* **[Unkillable Player Bug Fix](https://www.youtube.com/watch?v=vm98Y7Ee1A0):** Fixes a vanilla bug where enemy players occasionally become completely immune to normal gunfire after consecutive revives (previously only killable with a defibrillator).
+### Optional Gameplay & Performance Fixes (by [FlashHit](https://github.com/FlashHit))
+- **[Crabwalk Bug Fix](https://www.youtube.com/watch?v=S9q62Ii3ObM):** Fixes the bug where players become unable to move after being revived multiple times in quick succession.
+- **[Chat Lag Fix](https://www.youtube.com/watch?v=NSkG4IXkPHY):** Fixes severe FPS drops triggered when the client receives 200+ chat messages.
+- **[Unkillable Player Bug Fix](https://www.youtube.com/watch?v=vm98Y7Ee1A0):** Fixes a vanilla bug where enemy players occasionally become completely immune to normal gunfire after consecutive revives (previously only killable with a defibrillator).
 
 ---
 
@@ -30,25 +39,50 @@ A fork of [GlacierLab's bf3_fix](https://github.com/GlacierLab/bf3_fix) that fix
 
 ---
 
-## 🛠️ How to Install
+## 🛠️ Installation
 
 1. Go to the [Releases](https://github.com/IlIHydraIlI/BF3-UI-Scaling-Fix/releases) page and download:
-   * `Engine.BuildInfo_Win32_Retail_dll` *(Required)*
-   * `gm_fix.dll` *(Optional, for the gameplay/chat fixes)*
-2. Navigate to your Battlefield 3 installation folder.
-3. Locate the original file named `Engine.BuildInfo_Win32_Retail.dll` and rename it to `ori_Engine.BuildInfo_Win32_Retail.dll`.
-4. Drop the newly downloaded `Engine.BuildInfo_Win32_Retail_dll` (and optionally `gm_fix.dll`) into the game folder.
-5. Launch the game normally.
+   - `Engine.BuildInfo_Win32_Retail_dll` **(Required)**
+   - `gm_fix.dll` **(Optional)**
+
+2. Navigate to your Battlefield 3 installation folder (e.g., `...\Battlefield 3\`).
+
+3. **Rename the original file:**
+   - Locate `Engine.BuildInfo_Win32_Retail.dll`
+   - Rename it to `ori_Engine.BuildInfo_Win32_Retail_dll`
+   
+   > This step is **mandatory**—the mod works as a proxy DLL and must load the original file under this specific name.
+
+4. Drop the newly downloaded `Engine.BuildInfo_Win32_Retail_dll` into the game folder.
+
+5. _(Optional)_ If you want the gameplay fixes, drop `gm_fix.dll` into the same folder.
+
+6. Launch the game normally.
 
 > [!NOTE]  
 > **Anti-Cheat Safety:** These fixes have been extensively tested in multiplayer environments. Because they only alter specific memory logic locally, they will **not** trigger PunkBuster or server-side anti-cheat bans.
 
 ---
 
-## ⚠️ Known Issues
+## 🗑️ Uninstall
 
-* **Killfeed Freezing:** The killfeed may occasionally stop updating. 
-  * *Workaround:* Simply Alt-Tab out of the game and back in to reset it.
+Simply delete `Engine.BuildInfo_Win32_Retail_dll` and `gm_fix.dll` from your game folder, then rename `ori_Engine.BuildInfo_Win32_Retail_dll` back to `Engine.BuildInfo_Win32_Retail.dll`.
+
+---
+
+## ⚠️ Known Issues & Troubleshooting
+
+### Known Issues
+- **Killfeed Freezing:** The killfeed may occasionally stop updating.
+  - *Workaround:* Alt-Tab out of the game and back in to reset it.
+
+### Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| **Mod not loading** | Ensure you renamed the original file to `ori_Engine.BuildInfo_Win32_Retail_dll` exactly. |
+| **Game crashing on startup** | If building from source, verify you're compiling as 32-bit (x86) – BF3 is a 32-bit application. |
+| **Killfeed frozen** | Alt-Tab out and back in to reset it. |
 
 ---
 
@@ -62,17 +96,18 @@ Because the Battlefield 3 executable is packed with a digital protector, modifyi
 
 ## 💻 Build Environment
 
-* **IDE:** Visual Studio 2022
-* **Workload:** Desktop development with C++
+- **IDE:** Visual Studio 2022
+- **Workload:** Desktop development with C++
+- **Platform:** x86 (32-bit) – BF3 is a 32-bit application
 
 ---
 
 ## 🤝 Credits & Acknowledgments
 
-* [SeanPesce / DLL_Wrapper_Generator](https://github.com/SeanPesce/DLL_Wrapper_Generator) - Base wrapper generation tool.
-* [GlacierLab / bf3_fix](https://github.com/GlacierLab/bf3_fix) - Original UI scaling implementation.
-* [FlashHit](https://github.com/FlashHit) - God mode / revive fixes and assistance with memory addresses.
-* **aquamarine2000** - Contributions toward various aspect ratio scaling adjustments.
+- [SeanPesce / DLL_Wrapper_Generator](https://github.com/SeanPesce/DLL_Wrapper_Generator) - Base wrapper generation tool.
+- [GlacierLab / bf3_fix](https://github.com/GlacierLab/bf3_fix) - Original UI scaling implementation.
+- [FlashHit](https://github.com/FlashHit) - God mode / revive fixes and assistance with memory addresses.
+- **aquamarine2000** - Contributions toward various aspect ratio scaling adjustments.
 
 ---
 
